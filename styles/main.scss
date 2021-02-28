@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+
+  color: #fff;
+}
+
+body {
+    background: #212c4f;
+
+}
+
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 60%;
+  margin: 0 auto;
+  padding: 1em 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 9999;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin: 0 1em;
+    }
+
+    a {
+      font-weight: 400;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+  .notifications {
+    color: #000;
+    background: #54cff3;
+    padding: 0 0.6em;
+
+    border-radius: 100%;
+
+    cursor: pointer;
+  }
+}
+
+.hero {
+  position: relative;
+  display: block;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: url(../assets/Wallpaper.png);
+  background-size: cover;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background: #212c4f;
+    z-index: -5;
+  }
+
+  .featured-downloads {
+    height: 70vh;
+
+    background-size: cover;
+    background: url(../assets/image.png);
+
+    border-radius: 0.5em;
+
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+
+    .info {
+      padding: 3em 2.5em;
+
+      h1 {
+        font-size: 3em;
+      }
+
+      .group {
+        display: flex;
+
+        margin: 1em 0;
+
+        p {
+          font-weight: 400;
+        }
+
+        p:first-child {
+          margin-right: 1em;
+        }
+      }
+
+      .text {
+        font-weight: 400;
+        width: 50%;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+
+        margin: 2em 0;
+
+        padding: 0.5em 1.5em;
+
+        background: linear-gradient(93.96deg, #4b26ff 0%, #b01eff 100%);
+        box-shadow: 0px 10px 20px rgba(101, 41, 255, 0.15);
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+.section-1 {
+  background: #212c4f;
+}
+
+.popular {
+  h3 {
+    padding-bottom: 2em;
+  }
+
+  min-height: 100vh;
+
+  .grid {
+    display: grid;
+    min-height: 100vh;
+
+    height: 100%;
+
+    gap: 2em;
+    grid-template-areas:
+      "angle angle angle video"
+      "epub wallpapers wallpapers wallpapers";
+  }
+
+  .card {
+    background: #161a39;
+    padding: 2em;
+    border-radius: 1em;
+
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+
+    &.small {
+      h3 {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .angle {
+    grid-area: angle;
+  }
+
+  .video {
+    grid-area: video;
+  }
+
+  .epub {
+    grid-area: epub;
+  }
+
+  .wallpapers {
+    grid-area: wallpapers;
+  }
+}
